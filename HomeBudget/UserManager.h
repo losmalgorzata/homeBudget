@@ -29,6 +29,8 @@ public:
     }
 
     void listAllUsers();
+    int getIDOfLoggedUser();
+    int logonUser();
 };
 
 #endif

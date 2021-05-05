@@ -6,8 +6,7 @@ vector <User> FileWithUsers::loadUsersFromFile() {
     vector <User> users;
     bool fileExists = xml.Load( getFilename().c_str() );
 
-    if (!fileExists)
-    {
+    if (!fileExists){
         xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
         xml.AddElem("Users");
     }
@@ -16,8 +15,7 @@ vector <User> FileWithUsers::loadUsersFromFile() {
     xml.FindElem();
     xml.IntoElem();
 
-    while ( xml.FindElem("User") )
-    {
+    while ( xml.FindElem("User") ){
         User user;
         xml.IntoElem();
         xml.FindElem( "UserID" );

@@ -22,6 +22,9 @@ public:
         : userManager(filenameWithUsers){};
 
     void listAllUsers();
+    int getIDOfLoggedUser();
+    char chooseOptionOfMainMenu();
+    int logonUser();
 };
 
 /*

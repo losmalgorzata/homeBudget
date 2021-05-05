@@ -8,7 +8,32 @@ int main()
 {
     //HomeBudget homeBudget("users.xml", "incomes.xml", "expenses.xml");
     HomeBudget homeBudget("users.xml");
-    homeBudget.listAllUsers();
+    //homeBudget.listAllUsers();
+    //cout << homeBudget.getIDOfLoggedUser();
+
+    char choice;
+
+    while(true){
+        if (homeBudget.getIDOfLoggedUser() == 0){
+            choice = homeBudget.chooseOptionOfMainMenu();
+            switch(choice){
+            case '1':
+                //homeBudget.registerUser();
+                break;
+            case '2':
+                homeBudget.logonUser();
+                break;
+            case '3':
+                exit(0);
+                break;
+            default:
+                cout << endl << "Incorrect choice" << endl << endl;
+                system("pause");
+                break;
+            }
+        }
+    }
+
     return 0;
 }
 

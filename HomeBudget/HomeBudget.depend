@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1620208220 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\main.cpp
+	<iostream>
+	"HomeBudget.h"
+	<iostream>
+	<ctime>
+	<time.h>
+	<cstdio>
+	<string>
+	"Markup.h"
+
+4293264394 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\markup.h
+	<stdlib.h>
+	<string.h>
+	<string>
+	<afx.h>
+
+1620206907 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithusers.cpp
+	"FileWithUsers.h"
+
+1620208220 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithusers.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"User.h"
+	"XMLFile.h"
+	"Markup.h"
+
+1620155315 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\user.h
+	<iostream>
+
+1620206712 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\xmlfile.h
+	<iostream>
+	<fstream>
+
+1620155294 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\user.cpp
+	"User.h"
+
+1620208220 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.cpp
+	"UserManager.h"
+
+1620208220 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"User.h"
+	"FileWithUsers.h"
+
+1620206712 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\xmlfile.cpp
+	"XMLFile.h"
+
+1620208220 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.cpp
+	"HomeBudget.h"
+
+1620208220 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.h
+	<iostream>
+	"UserManager.h"
+

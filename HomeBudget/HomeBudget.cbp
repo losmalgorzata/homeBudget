@@ -36,6 +36,8 @@
 		<Unit filename="AuxiliaryMethods.h" />
 		<Unit filename="FileWithUsers.cpp" />
 		<Unit filename="FileWithUsers.h" />
+		<Unit filename="FinancialItem.cpp" />
+		<Unit filename="FinancialItem.h" />
 		<Unit filename="HomeBudget.cpp" />
 		<Unit filename="HomeBudget.h" />
 		<Unit filename="Markup.cpp" />

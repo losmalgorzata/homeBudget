@@ -21,3 +21,10 @@ string AuxiliaryMethods::getLine() {
     getline(cin, entry);
     return entry;
 }
+
+string AuxiliaryMethods::intToStringConversion(int number){
+    ostringstream ss;
+    ss << number;
+    string str = ss.str();
+    return str;
+}

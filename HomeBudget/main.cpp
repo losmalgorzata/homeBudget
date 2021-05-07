@@ -9,41 +9,11 @@ int main()
     //HomeBudget homeBudget("users.xml", "incomes.xml", "expenses.xml");
     HomeBudget homeBudget("users.xml");
     //homeBudget.listAllUsers();
-    //cout << homeBudget.getIDOfLoggedUser();
 
     char choice;
 
     while(true){
-        if (homeBudget.getIDOfLoggedUser() == 0){
-            choice = homeBudget.chooseOptionOfMainMenu();
-            switch(choice){
-            case '1':
-                //homeBudget.registerUser();
-                break;
-            case '2':
-                homeBudget.logonUser();
-                break;
-            case '3':
-                exit(0);
-                break;
-            default:
-                cout << endl << "Incorrect choice" << endl << endl;
-                system("pause");
-                break;
-            }
-        }
-    }
-
-    return 0;
-}
-
-
-
-/*
-    char choice;
-
-    while(true){
-        if (homeBudget.getIDOfLoggedUser() == 0){
+        if (homeBudget.getLoggedUserID() == 0){
             choice = homeBudget.chooseOptionOfMainMenu();
             switch(choice){
             case '1':
@@ -64,22 +34,24 @@ int main()
             choice = homeBudget.chooseOptionOfUserMenu();
             switch(choice){
             case '1':
-                homeBudget.addIncome();
+                //homeBudget.addIncome();
                 break;
             case '2':
-                homeBudget.addExpense();
+                //homeBudget.addExpense();
                 break;
             case '3':
-                homeBudget.displayBalanceOfCurrentMonth();
+                //homeBudget.displayBalanceOfCurrentMonth();
                 break;
             case '4':
-                homeBudget.displayBalanceOfPreviousMonth();
+                //homeBudget.displayBalanceOfPreviousMonth();
                 break;
             case '5':
-                homeBudget.displayBalanceOfChosenFrame();
+                //homeBudget.displayBalanceOfChosenFrame();
                 break;
             case '6':
                 homeBudget.changePassword();
+                homeBudget.listAllUsers();
+                system("pause");
                 break;
             case '7':
                 homeBudget.logoutUser();
@@ -91,50 +63,10 @@ int main()
             }
         }
     }
-*/
-
-
-/*
-#include <iostream>
-#include <ctime>
-#include <time.h>
-#include <cstdio>
-#include <string>
-
-#include "Markup.h"
-
-using namespace std;
-
-int main()
-{
-    CMarkup xml;
-
-    bool fileExists = xml.Load( "users.xml" );
-    cout << fileExists;
-
-    if (!fileExists)
-    {
-        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
-        xml.AddElem("Users");
-    }
-
-    xml.ResetPos();
-    xml.FindElem();
-    xml.IntoElem();
-    xml.AddElem("User");
-    xml.IntoElem();
-    xml.AddElem("UserID", "2");
-    xml.AddElem("Login", "bartek");
-    xml.AddElem("Password", "456");
-    xml.AddElem("Name", "imie");
-    xml.AddElem("Surname", "nazwisko");
-    xml.OutOfElem();
-    xml.OutOfElem();
-
-    xml.Save("users.xml");
-
     return 0;
-}*/
+}
+
+
 /*
 int get_year(string date)
 {
@@ -295,25 +227,7 @@ int number_of_days(string date)
 
 
 
-/*
-
-    xml.ResetPos();
-    xml.FindElem();
-    xml.IntoElem();
-    //xml.AddElem("User");
-    //xml.IntoElem();
-    //xml.AddElem("UserId", "2");
-    //xml.AddElem("Login", "bartek");
-    //xml.AddElem("Password", "456");
-    //xml.AddElem("Amount", "456.56");
-    //xml.AddElem("Date", "2000-01-01");
-    //xml.OutOfElem();
-    //xml.OutOfElem();
-
-    //xml.Save("users.xml");
-
-
-    while ( xml.FindElem("User") )
+/*  while ( xml.FindElem("User") )
     {
         xml.IntoElem();
         xml.FindElem( "Login" );

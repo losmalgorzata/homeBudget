@@ -40,3 +40,27 @@ vector <User> FileWithUsers::loadUsersFromFile() {
 
     return users;
 }
+
+void FileWithUsers::addUserToFile(User user) {
+
+    CMarkup xml;
+    bool fileExists = xml.Load( getFilename().c_str() );
+    if (!fileExists){
+        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
+        xml.AddElem("Users");
+    }
+    xml.ResetPos();
+    xml.FindElem();
+    xml.IntoElem();
+    xml.AddElem("User");
+    xml.IntoElem();
+    xml.AddElem("UserID", AuxiliaryMethods::intToStringConversion(user.getUserID()));
+    xml.AddElem("Login", user.getLogin());
+    xml.AddElem("Password", user.getPassword());
+    xml.AddElem("Name", user.getName());
+    xml.AddElem("Surname", user.getSurname());
+    xml.OutOfElem();
+    xml.OutOfElem();
+
+    xml.Save(getFilename().c_str());
+}

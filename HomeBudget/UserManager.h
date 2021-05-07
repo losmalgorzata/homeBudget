@@ -18,9 +18,9 @@ class UserManager
     vector <User> users;
 
     //User giveNewUserData();
-    //int getLoggedUserID();
-    //bool doesLoginExist(string login);
+    bool doesLoginExist(string login);
     FileWithUsers fileWithUsers;
+    User giveNewUserData();
 
 public:
     UserManager(string filenameWithUsers) : fileWithUsers(filenameWithUsers){
@@ -29,8 +29,13 @@ public:
     }
 
     void listAllUsers();
-    int getIDOfLoggedUser();
+    int getLoggedUserID();
+    int getNewUserID();
     int logonUser();
+    void registerUser();
+    void logoutUser();
+    void changePassword();
+    void saveAllUsersToFile();
 };
 
 #endif

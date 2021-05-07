@@ -19,7 +19,7 @@ class FileWithUsers : public XMLFile
 
 public:
     FileWithUsers(string FILENAMEWITHUSERS) : XMLFile(FILENAMEWITHUSERS){};
-    //void addUserToFile(User user);
+    void addUserToFile(User user);
     vector <User> loadUsersFromFile();
 };
 

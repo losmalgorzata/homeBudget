@@ -10,7 +10,7 @@ void UserManager::listAllUsers() {
     }
 }
 
-int UserManager::getIDOfLoggedUser(){
+int UserManager::getLoggedUserID(){
     return loggedUserID;
 }
 
@@ -21,12 +21,10 @@ int UserManager::logonUser(){
 
     for (int i = 0; i < users.size(); i++) {
         if (users[i].getLogin() == login){
-            for (int p = 0; p < 3; p++)
-            {
-                cout << "Provide password. " << 3-p << " trials left.";
+            for (int p = 0; p < 3; p++){
+                cout << "Provide password. " << 3-p << " trials left: ";
                 password = AuxiliaryMethods::getLine();
-                if (users[i].getPassword() == password)
-                {
+                if (users[i].getPassword() == password){
                     cout << "User logged in" << endl;
                     Sleep(1000);
                     loggedUserID = users[i].getUserID();
@@ -42,5 +40,108 @@ int UserManager::logonUser(){
     return 0;
 }
 
+void UserManager::registerUser(){
+    User user = giveNewUserData();
 
+    users.push_back(user);
+    fileWithUsers.addUserToFile(user);
+
+    cout << endl << "Registration successful" << endl << endl;
+    system("pause");
+}
+
+User UserManager::giveNewUserData(){
+    User user;
+    user.setUserID(getNewUserID());
+    string login;
+
+    do{
+        cout << "Provide login: ";
+        cin >> login;
+        user.setLogin(login);
+    } while (doesLoginExist(user.getLogin()) == true);
+
+    string password;
+    cout << "Provide password: ";
+    cin >> password;
+    user.setPassword(password);
+
+    string name;
+    cout << "Provide name: ";
+    cin >> name;
+    user.setName(name);
+
+    string surname;
+    cout << "Provide surname: ";
+    cin >> surname;
+    user.setSurname(surname);
+
+    return user;
+}
+
+int UserManager::getNewUserID(){
+    if (users.empty() == true)
+        return 1;
+    else
+        return users.back().getUserID() + 1;
+}
+
+bool UserManager::doesLoginExist(string login){
+    for (int i=0; i < users.size(); i++)
+    {
+        if (users[i].getLogin() == login)
+        {
+            cout << endl << "There is such a login already" << endl;
+            return true;
+        }
+    }
+    return false;
+}
+
+void UserManager::logoutUser(){
+    loggedUserID = 0;
+}
+
+void UserManager::changePassword(){
+    string newPasword = "";
+    cout << "Provide a new password: ";
+    newPasword = AuxiliaryMethods::getLine();
+
+    for (int i=0; i < users.size(); i++)
+    {
+        if (users[i].getUserID() == loggedUserID)
+        {
+            users[i].setPassword(newPasword);
+            cout << "The password has been changed" << endl;
+            Sleep(1500);
+        }
+    }
+
+    saveAllUsersToFile();
+}
+
+void UserManager::saveAllUsersToFile(){
+    CMarkup xml;
+    xml.Load( fileWithUsers.getFilename().c_str() );
+    xml.ResetPos();
+    xml.FindElem("Users");
+    xml.RemoveElem();
+
+    xml.AddElem("Users");
+    for (int i=0; i < users.size(); i++){
+        xml.ResetPos();
+        xml.FindElem();
+        xml.IntoElem();
+        xml.AddElem("User");
+        xml.IntoElem();
+        xml.AddElem("UserID", AuxiliaryMethods::intToStringConversion(users[i].getUserID()));
+        xml.AddElem("Login", users[i].getLogin());
+        xml.AddElem("Password", users[i].getPassword());
+        xml.AddElem("Name", users[i].getName());
+        xml.AddElem("Surname", users[i].getSurname());
+        xml.OutOfElem();
+        xml.OutOfElem();
+    }
+    xml.Save(fileWithUsers.getFilename().c_str());
+}
 

@@ -15,6 +15,7 @@ class AuxiliaryMethods
 public:
     static char getChar();
     static string getLine();
+    static string intToStringConversion(int number);
 };
 
 #endif

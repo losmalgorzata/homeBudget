@@ -145,3 +145,10 @@ void UserManager::saveAllUsersToFile(){
     xml.Save(fileWithUsers.getFilename().c_str());
 }
 
+bool UserManager::isUserLoggedIn()
+{
+    if(loggedUserID > 0)
+        return true;
+    else
+        return false;
+}

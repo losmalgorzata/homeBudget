@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1620393486 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\main.cpp
+1620571445 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\main.cpp
 	<iostream>
 	"HomeBudget.h"
 
@@ -12,7 +12,7 @@
 1620376399 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithusers.cpp
 	"FileWithUsers.h"
 
-1620375726 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithusers.h
+1620489925 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithusers.h
 	<iostream>
 	<vector>
 	<fstream>
@@ -20,22 +20,22 @@
 	"User.h"
 	"AuxiliaryMethods.h"
 	"XMLFile.h"
-	"Markup.h"
 
 1620155315 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\user.h
 	<iostream>
 
-1620206712 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\xmlfile.h
+1620489925 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\xmlfile.h
 	<iostream>
 	<fstream>
+	"Markup.h"
 
 1620155294 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\user.cpp
 	"User.h"
 
-1620393486 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.cpp
+1620489925 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.cpp
 	"UserManager.h"
 
-1620390858 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.h
+1620489925 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\usermanager.h
 	<iostream>
 	<vector>
 	<windows.h>
@@ -47,21 +47,84 @@
 1620213272 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\xmlfile.cpp
 	"XMLFile.h"
 
-1620386132 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.cpp
+1620493147 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.cpp
 	"HomeBudget.h"
 
-1620386132 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.h
+1620493123 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.h
 	<iostream>
 	"UserManager.h"
+	"IncomeManager.h"
 
-1620376399 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.h
+1620646057 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.h
 	<iostream>
 	<sstream>
 	<fstream>
 	<windows.h>
 	<vector>
 	<algorithm>
+	<string.h>
 
-1620376399 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.cpp
+1620646601 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.cpp
+	"AuxiliaryMethods.h"
+
+1620396074 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expense.cpp
+
+1620395978 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\financialitem.cpp
+	"FinancialItem.h"
+
+1620395978 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\financialitem.h
+	<iostream>
+
+1620463141 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\income.cpp
+	"Income.h"
+
+1620466759 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\income.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"FinancialItem.h"
+
+1620463232 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithexpenses.cpp
+
+1620464575 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expensemanager.cpp
+
+1620566322 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithincomes.cpp
+	"FileWithIncomes.h"
+
+1620573855 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithincomes.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Income.h"
+	"AuxiliaryMethods.h"
+	"XMLFile.h"
+
+1620645114 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\incomemanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Income.h"
+	"FileWithIncomes.h"
+	"DateOperation.h"
+
+1620645544 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\incomemanager.cpp
+	"IncomeManager.h"
+
+1620643234 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\dateoperation.cpp
+	"DateOperation.h"
+
+1620643250 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\dateoperation.h
+	<iostream>
+	<sstream>
+	<fstream>
+	<windows.h>
+	<vector>
+	<algorithm>
+	<string.h>
+	<ctime>
 	"AuxiliaryMethods.h"
 

@@ -26,11 +26,11 @@ char HomeBudget::chooseOptionOfMainMenu(){
 
 int HomeBudget::logonUser(){
     userManager.logonUser();
-    /*
-    if (uzytkownikMenedzer.czyUzytkownikJestZalogowany()){
-        adresatMenedzer = new AdresatMenedzer(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika());
+
+    if (userManager.isUserLoggedIn()){
+        incomeManager = new IncomeManager(FILENAME_WITH_INCOMES, userManager.getLoggedUserID());
     }
-    */
+
 }
 
 void HomeBudget::registerUser()
@@ -61,11 +61,27 @@ char HomeBudget::chooseOptionOfUserMenu() {
 void HomeBudget::logoutUser()
 {
     userManager.logoutUser();
-    //delete adresatMenedzer;
-    //adresatMenedzer = NULL;
+    delete incomeManager;
+    incomeManager = NULL;
 }
 
 void HomeBudget::changePassword()
 {
     userManager.changePassword();
+}
+
+void HomeBudget::addIncome(){
+    if(userManager.isUserLoggedIn())
+    {
+        incomeManager->addIncome();
+    }
+    else
+    {
+        cout << "Please log in before adding an income" << endl;
+        system("pause");
+    }
+}
+
+void HomeBudget::listIncomes(){
+    incomeManager->listIncomes();
 }

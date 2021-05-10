@@ -4,7 +4,7 @@
 #include <iostream>
 
 #include "UserManager.h"
-//#include "IncomeManager.h"
+#include "IncomeManager.h"
 //#include "ExpenseManager.h"
 
 using namespace std;
@@ -12,14 +12,22 @@ using namespace std;
 class HomeBudget
 {
     UserManager userManager;
-    //IncomeManager *incomeManager;
+    IncomeManager *incomeManager;
     //ExpenseManager *expenseManager;
-    //const string FILENAME_WITH_INCOMES;
+    const string FILENAME_WITH_INCOMES;
     //const string FILENAME_WITH_EXPENSES;
 
 public:
-    HomeBudget(string filenameWithUsers)
-        : userManager(filenameWithUsers){};
+    HomeBudget(string filenameWithUsers, string filenameWithIncomes)
+        : userManager(filenameWithUsers), FILENAME_WITH_INCOMES(filenameWithIncomes){
+            incomeManager = NULL;
+    };
+    ~HomeBudget(){
+        delete incomeManager;
+        incomeManager = NULL;
+        //delete expenseManager;
+        //expenseManager = NULL;
+    }
 
     void listAllUsers();
     int getLoggedUserID();
@@ -29,6 +37,9 @@ public:
     char chooseOptionOfUserMenu();
     void logoutUser();
     void changePassword();
+
+    void addIncome();
+    void listIncomes();
 };
 
 /*

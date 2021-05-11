@@ -6,8 +6,7 @@ using namespace std;
 
 int main()
 {
-    //HomeBudget homeBudget("users.xml", "incomes.xml", "expenses.xml");
-    HomeBudget homeBudget("users.xml", "incomes.xml");
+    HomeBudget homeBudget("users.xml", "incomes.xml", "expenses.xml");
 
     char choice;
 
@@ -39,7 +38,7 @@ int main()
                 system("pause");
                 break;
             case '2':
-                //homeBudget.addExpense();
+                homeBudget.addExpense();
                 break;
             case '3':
                 homeBudget.displayBalanceOfCurrentMonth();

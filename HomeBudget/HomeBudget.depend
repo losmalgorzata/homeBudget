@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1620724020 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\main.cpp
+1620756230 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\main.cpp
 	<iostream>
 	"HomeBudget.h"
 
@@ -50,10 +50,11 @@
 1620744440 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.cpp
 	"HomeBudget.h"
 
-1620745125 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.h
+1620760229 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\homebudget.h
 	<iostream>
 	"UserManager.h"
 	"IncomeManager.h"
+	"ExpenseManager.h"
 
 1620669267 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.h
 	<iostream>
@@ -67,7 +68,8 @@
 1620669267 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\auxiliarymethods.cpp
 	"AuxiliaryMethods.h"
 
-1620396074 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expense.cpp
+1620756309 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expense.cpp
+	"Expense.h"
 
 1620665692 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\financialitem.cpp
 	"FinancialItem.h"
@@ -85,9 +87,11 @@
 	<cstdlib>
 	"FinancialItem.h"
 
-1620463232 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithexpenses.cpp
+1620760010 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithexpenses.cpp
+	"FileWithExpenses.h"
 
-1620464575 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expensemanager.cpp
+1620757428 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expensemanager.cpp
+	"ExpenseManager.h"
 
 1620668800 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithincomes.cpp
 	"FileWithIncomes.h"
@@ -114,7 +118,7 @@
 1620745092 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\incomemanager.cpp
 	"IncomeManager.h"
 
-1620744440 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\dateoperation.cpp
+1620745223 source:c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\dateoperation.cpp
 	"DateOperation.h"
 
 1620744440 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\dateoperation.h
@@ -127,4 +131,30 @@
 	<string.h>
 	<ctime>
 	"AuxiliaryMethods.h"
+
+1620756309 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expense.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"FinancialItem.h"
+
+1620757523 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\filewithexpenses.h
+	<iostream>
+	<vector>
+	<fstream>
+	<cstdlib>
+	"Expense.h"
+	"AuxiliaryMethods.h"
+	"XMLFile.h"
+
+1620760044 c:\users\losma\onedrive\pulpit\nauka_programowania\przyszly_programista\oop\homebudget\homebudget\homebudget\expensemanager.h
+	<iostream>
+	<vector>
+	<windows.h>
+	<fstream>
+	<sstream>
+	"Expense.h"
+	"FileWithExpenses.h"
+	"DateOperation.h"
 

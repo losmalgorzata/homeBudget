@@ -19,6 +19,7 @@ public:
     static string intToStringConversion(int number);
     static string doubleToStringConversion(double number);
     static string changeCommaToDot(string input);
+    static int stringToIntConversion(string input);
 };
 
 #endif

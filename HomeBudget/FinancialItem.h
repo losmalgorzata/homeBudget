@@ -11,6 +11,7 @@ class FinancialItem {
     string date;
     string item;
     double amount;
+    int dateInt;
 
 public:
     int getID();
@@ -18,12 +19,14 @@ public:
     string getDate();
     string getItem();
     double getAmount();
+    int getDateInt();
 
     void setID(int newID);
     void setUserID(int newUserID);
     void setDate(string newDate);
     void setItem(string newItem);
     void setAmount(double newAmount);
+    void setDateInt(int newDateInt);
 };
 
 #endif

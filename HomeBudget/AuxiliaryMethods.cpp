@@ -45,3 +45,9 @@ string AuxiliaryMethods::changeCommaToDot(string input){
     return output;
 }
 
+int AuxiliaryMethods::stringToIntConversion(string input){
+    int inputInt;
+    istringstream iss(input);
+    iss >> inputInt;
+    return inputInt;
+}

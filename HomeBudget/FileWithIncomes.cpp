@@ -28,6 +28,8 @@ vector <Income> FileWithIncomes::loadIncomesFromFile(int loggedUserID){
         string item = xml.GetData();
         xml.FindElem( "Amount" );
         double amount = atof(xml.GetData().c_str());
+        xml.FindElem( "DateInt" );
+        int dateInt = atoi(xml.GetData().c_str());
         xml.OutOfElem();
 
         if (userID == loggedUserID) {
@@ -36,6 +38,7 @@ vector <Income> FileWithIncomes::loadIncomesFromFile(int loggedUserID){
             income.setDate(date);
             income.setItem(item);
             income.setAmount(amount);
+            income.setDateInt(dateInt);
             incomes.push_back(income);
         }
     }
@@ -60,6 +63,7 @@ bool FileWithIncomes::addIncomeToFile(Income income){
     xml.AddElem("Date", income.getDate());
     xml.AddElem("Item", income.getItem());
     xml.AddElem("Amount", AuxiliaryMethods::doubleToStringConversion(income.getAmount()));
+    xml.AddElem("DateInt", AuxiliaryMethods::intToStringConversion(income.getDateInt()));
     xml.OutOfElem();
     xml.OutOfElem();
 

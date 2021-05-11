@@ -236,3 +236,28 @@ bool DateOperation::checkDate(string date){
         return false;
 }
 
+int DateOperation::changeDateFromStringToInt(string date){
+    int dateInt;
+    string dateStr;
+    int year = getYear(date);
+    int month = getMonth(date);
+    int day = getDay(date);
+
+    string yearStr, monthStr, dayStr;
+    yearStr = AuxiliaryMethods::intToStringConversion(year);
+
+    if (month < 10)
+        monthStr = "0" + AuxiliaryMethods::intToStringConversion(month);
+    else
+        monthStr = AuxiliaryMethods::intToStringConversion(month);
+
+    if (day < 10)
+        dayStr = "0" + AuxiliaryMethods::intToStringConversion(day);
+    else
+        dayStr = AuxiliaryMethods::intToStringConversion(day);
+
+    dateStr = yearStr + monthStr + dayStr;
+    dateInt = AuxiliaryMethods::stringToIntConversion(dateStr);
+
+    return dateInt;
+}

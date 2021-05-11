@@ -39,7 +39,8 @@ public:
     void changePassword();
 
     void addIncome();
-    void listIncomes();
+    void listIncomes(vector <Income> incomes);
+    void displayBalanceOfCurrentMonth();
 };
 
 /*

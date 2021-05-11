@@ -20,7 +20,7 @@ int main()
                 break;
             case '2':
                 homeBudget.logonUser();
-                homeBudget.listIncomes();
+                //homeBudget.listIncomes(incomes);
                 system("pause");
                 break;
             case '3':
@@ -36,14 +36,13 @@ int main()
             switch(choice){
             case '1':
                 homeBudget.addIncome();
-                homeBudget.listIncomes();
                 system("pause");
                 break;
             case '2':
                 //homeBudget.addExpense();
                 break;
             case '3':
-                //homeBudget.displayBalanceOfCurrentMonth();
+                homeBudget.displayBalanceOfCurrentMonth();
                 break;
             case '4':
                 //homeBudget.displayBalanceOfPreviousMonth();

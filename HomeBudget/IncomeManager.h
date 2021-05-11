@@ -28,10 +28,14 @@ public:
     };
 
     void addIncome();
-    void listIncomes();
+    void listIncomes(vector <Income> incomes);
     int getNewIncomeID();
     Income giveNewIncomeDataOfChosenDay();
     Income giveNewIncomeDataOfToday();
+    void displayBalanceOfCurrentMonth();
+    double calculateSumOfIncomesOfCurrentMonth();
+    vector <Income> chooseIncomesFromMonth(int year, int month);
+    vector <Income> sortIncomes(vector <Income> chosenIncomes);
 };
 
 #endif

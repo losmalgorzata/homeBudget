@@ -27,6 +27,7 @@ public:
     static string getMaxDate();
     static bool checkMinCriterion(string date);
     static bool checkMaxCriterion(string date);
+    static int changeDateFromStringToInt(string date);
 };
 
 #endif

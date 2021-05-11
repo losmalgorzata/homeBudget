@@ -82,6 +82,13 @@ void HomeBudget::addIncome(){
     }
 }
 
-void HomeBudget::listIncomes(){
-    incomeManager->listIncomes();
+void HomeBudget::listIncomes(vector <Income> incomes){
+    incomeManager->listIncomes(incomes);
+}
+
+void HomeBudget::displayBalanceOfCurrentMonth(){
+    incomeManager->displayBalanceOfCurrentMonth();
+    double sumOfIncomes = incomeManager->calculateSumOfIncomesOfCurrentMonth();
+    cout << "Sum of the incomes: " << sumOfIncomes << endl;
+    system("pause");
 }

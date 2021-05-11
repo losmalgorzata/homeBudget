@@ -21,6 +21,10 @@ void FinancialItem::setAmount(double newAmount) {
     amount = newAmount;
 }
 
+void FinancialItem::setDateInt(int newDateInt){
+    dateInt = newDateInt;
+}
+
 int FinancialItem::getID() {
     return ID;
 }
@@ -39,4 +43,8 @@ string FinancialItem::getItem() {
 
 double FinancialItem::getAmount() {
     return amount;
+}
+
+int FinancialItem::getDateInt(){
+    return dateInt;
 }

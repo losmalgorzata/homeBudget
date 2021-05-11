@@ -99,3 +99,12 @@ void HomeBudget::displayBalanceOfPreviousMonth(){
     cout << "Sum of the incomes: " << sumOfIncomes << endl;
     system("pause");
 }
+
+void HomeBudget::displayBalanceOfChosenFrame(){
+    string dateStart = DateOperation::giveDateStart();
+    string dateEnd = DateOperation::giveDateEnd();
+    incomeManager->displayBalanceOfChosenFrame(dateStart, dateEnd);
+    double sumOfIncomes = incomeManager->calculateSumOfIncomesOfChosenFrame(dateStart, dateEnd);
+    cout << "Sum of the incomes: " << sumOfIncomes << endl;
+    system("pause");
+}

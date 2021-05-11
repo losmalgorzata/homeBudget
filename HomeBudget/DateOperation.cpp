@@ -261,3 +261,35 @@ int DateOperation::changeDateFromStringToInt(string date){
 
     return dateInt;
 }
+
+string DateOperation::giveDateStart(){
+    string dateStart;
+    cout << "Provide start date [yyyy-mm-dd]: ";
+    dateStart = AuxiliaryMethods::getLine();
+    bool examStart = checkDate(dateStart);
+
+    while (examStart == 0){
+        cout << endl << "Incorrect date" << endl << endl;
+        system("pause");
+        cout << "Provide start date [yyyy-mm-dd]: ";
+        dateStart = AuxiliaryMethods::getLine();
+        examStart = checkDate(dateStart);
+    }
+    return dateStart;
+}
+
+string DateOperation::giveDateEnd(){
+    string dateEnd;
+    cout << "Provide end date [yyyy-mm-dd]: ";
+    dateEnd = AuxiliaryMethods::getLine();
+    bool examEnd = checkDate(dateEnd);
+
+    while (examEnd == 0){
+        cout << endl << "Incorrect date" << endl << endl;
+        system("pause");
+        cout << "Provide end date [yyyy-mm-dd]: ";
+        dateEnd = AuxiliaryMethods::getLine();
+        examEnd = checkDate(dateEnd);
+    }
+    return dateEnd;
+}

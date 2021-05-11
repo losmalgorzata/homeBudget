@@ -36,8 +36,11 @@ public:
     double calculateSumOfIncomesOfCurrentMonth();
     void displayBalanceOfPreviousMonth();
     double calculateSumOfIncomesOfPreviousMonth();
+    void displayBalanceOfChosenFrame(string dateStart, string dateEnd);
+    double calculateSumOfIncomesOfChosenFrame(string dateStart, string dateEnd);
     vector <Income> chooseIncomesFromMonth(int year, int month);
     vector <Income> sortIncomes(vector <Income> chosenIncomes);
+    vector <Income> chooseIncomesFromChosenFrame(string dateStart, string dateEnd);
 };
 
 #endif

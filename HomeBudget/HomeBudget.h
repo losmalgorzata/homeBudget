@@ -42,6 +42,7 @@ public:
     void listIncomes(vector <Income> incomes);
     void displayBalanceOfCurrentMonth();
     void displayBalanceOfPreviousMonth();
+    void displayBalanceOfChosenFrame();
 };
 
 /*

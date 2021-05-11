@@ -48,7 +48,7 @@ int main()
                 homeBudget.displayBalanceOfPreviousMonth();
                 break;
             case '5':
-                //homeBudget.displayBalanceOfChosenFrame();
+                homeBudget.displayBalanceOfChosenFrame();
                 break;
             case '6':
                 homeBudget.changePassword();

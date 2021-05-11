@@ -221,3 +221,45 @@ double IncomeManager::calculateSumOfIncomesOfPreviousMonth(){
     }
     return sumOfIncomes;
 }
+
+void IncomeManager::displayBalanceOfChosenFrame(string dateStart, string dateEnd){
+    vector <Income> chosenIncomes;
+    chosenIncomes = chooseIncomesFromChosenFrame(dateStart, dateEnd);
+    listIncomes(sortIncomes(chosenIncomes));
+}
+
+double IncomeManager::calculateSumOfIncomesOfChosenFrame(string dateStart, string dateEnd){
+    double sumOfIncomes=0.0;
+    double amount;
+    vector <Income> chosenIncomes = chooseIncomesFromChosenFrame(dateStart, dateEnd);
+    for (int i=0; i < chosenIncomes.size(); i++) {
+        amount = chosenIncomes[i].getAmount();
+        sumOfIncomes = sumOfIncomes + amount;
+    }
+    return sumOfIncomes;
+}
+
+vector <Income> IncomeManager::chooseIncomesFromChosenFrame(string dateStart, string dateEnd){
+    vector <Income> chosenIncomes;
+    int startYear = DateOperation::getYear(dateStart);
+    int startMonth = DateOperation::getMonth(dateStart);
+    int startDay = DateOperation::getDay(dateStart);
+    int endYear = DateOperation::getYear(dateEnd);
+    int endMonth = DateOperation::getMonth(dateEnd);
+    int endDay = DateOperation::getDay(dateEnd);
+
+    string incomeDate;
+    int incomeYear, incomeMonth, incomeDay;
+
+    for (int i=0; i < incomes.size(); i++) {
+        incomeDate = incomes[i].getDate();
+        incomeYear = DateOperation::getYear(incomeDate);
+        incomeMonth = DateOperation::getMonth(incomeDate);
+        incomeDay = DateOperation::getDay(incomeDate);
+        if ((incomeYear >= startYear) && (incomeMonth >= startMonth) && (incomeDay >= startDay)
+            && (incomeYear <= endYear) && (incomeMonth <= endMonth) && (incomeDay <= endDay)){
+            chosenIncomes.push_back(incomes[i]);
+        }
+    }
+    return chosenIncomes;
+}

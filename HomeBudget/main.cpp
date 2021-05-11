@@ -45,7 +45,7 @@ int main()
                 homeBudget.displayBalanceOfCurrentMonth();
                 break;
             case '4':
-                //homeBudget.displayBalanceOfPreviousMonth();
+                homeBudget.displayBalanceOfPreviousMonth();
                 break;
             case '5':
                 //homeBudget.displayBalanceOfChosenFrame();

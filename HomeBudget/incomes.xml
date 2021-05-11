@@ -16,4 +16,12 @@
 <Amount>200.450000</Amount>
 <DateInt>20210512</DateInt>
 </Income>
+<Income>
+<ID>3</ID>
+<UserID>1</UserID>
+<Date>2021-04-05</Date>
+<Item>salary</Item>
+<Amount>700.600000</Amount>
+<DateInt>20210405</DateInt>
+</Income>
 </Incomes>

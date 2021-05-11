@@ -2,9 +2,9 @@
 
 void IncomeManager::listIncomes(vector <Income> incomes){
     for (int i=0; i < incomes.size(); i++) {
-        cout << (incomes[i].getID()) << endl;
-        cout << (incomes[i].getUserID()) << endl;
-        cout << (incomes[i].getDate()) << endl;
+        //cout << (incomes[i].getID()) << endl;
+        //cout << (incomes[i].getUserID()) << endl;
+        cout << endl << (incomes[i].getDate()) << endl;
         cout << (incomes[i].getItem()) << endl;
         cout << (incomes[i].getAmount()) << endl;
     }
@@ -177,3 +177,47 @@ vector <Income> IncomeManager::sortIncomes(vector <Income> chosenIncomes){
     return chosenIncomes;
 }
 
+void IncomeManager::displayBalanceOfPreviousMonth(){
+    vector <Income> chosenIncomes;
+    string today = DateOperation::getTodayDate();
+    int currentYear = DateOperation::getYear(today);
+    int currentMonth = DateOperation::getMonth(today);
+
+    int previousMonth, previousYear;
+
+    if (currentMonth==1){
+        previousMonth = 12;
+        previousYear = currentYear - 1;
+    } else {
+        previousMonth = currentMonth - 1;
+        previousYear = currentYear;
+    }
+
+    chosenIncomes = chooseIncomesFromMonth(previousYear, previousMonth);
+    listIncomes(sortIncomes(chosenIncomes));
+}
+
+double IncomeManager::calculateSumOfIncomesOfPreviousMonth(){
+    double sumOfIncomes=0.0;
+    double amount;
+    string today = DateOperation::getTodayDate();
+    int currentYear = DateOperation::getYear(today);
+    int currentMonth = DateOperation::getMonth(today);
+
+    int previousMonth, previousYear;
+
+    if (currentMonth==1){
+        previousMonth = 12;
+        previousYear = currentYear - 1;
+    } else {
+        previousMonth = currentMonth - 1;
+        previousYear = currentYear;
+    }
+
+    vector <Income> chosenIncomes = chooseIncomesFromMonth(previousYear, previousMonth);
+    for (int i=0; i < chosenIncomes.size(); i++) {
+        amount = chosenIncomes[i].getAmount();
+        sumOfIncomes = sumOfIncomes + amount;
+    }
+    return sumOfIncomes;
+}

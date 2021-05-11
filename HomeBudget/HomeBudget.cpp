@@ -92,3 +92,10 @@ void HomeBudget::displayBalanceOfCurrentMonth(){
     cout << "Sum of the incomes: " << sumOfIncomes << endl;
     system("pause");
 }
+
+void HomeBudget::displayBalanceOfPreviousMonth(){
+    incomeManager->displayBalanceOfPreviousMonth();
+    double sumOfIncomes = incomeManager->calculateSumOfIncomesOfPreviousMonth();
+    cout << "Sum of the incomes: " << sumOfIncomes << endl;
+    system("pause");
+}

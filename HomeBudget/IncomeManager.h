@@ -34,6 +34,8 @@ public:
     Income giveNewIncomeDataOfToday();
     void displayBalanceOfCurrentMonth();
     double calculateSumOfIncomesOfCurrentMonth();
+    void displayBalanceOfPreviousMonth();
+    double calculateSumOfIncomesOfPreviousMonth();
     vector <Income> chooseIncomesFromMonth(int year, int month);
     vector <Income> sortIncomes(vector <Income> chosenIncomes);
 };

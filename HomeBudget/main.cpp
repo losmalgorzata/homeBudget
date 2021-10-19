@@ -51,7 +51,7 @@ int main()
                 break;
             case '6':
                 homeBudget.changePassword();
-                homeBudget.listAllUsers();
+                //homeBudget.listAllUsers();
                 system("pause");
                 break;
             case '7':

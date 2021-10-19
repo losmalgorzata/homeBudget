@@ -80,10 +80,7 @@ User UserManager::giveNewUserData(){
 }
 
 int UserManager::getNewUserID(){
-    if (users.empty() == true)
-        return 1;
-    else
-        return users.back().getUserID() + 1;
+    return(users.empty() == true ? 1 : (users.back().getUserID() + 1));
 }
 
 bool UserManager::doesLoginExist(string login){
@@ -147,8 +144,5 @@ void UserManager::saveAllUsersToFile(){
 
 bool UserManager::isUserLoggedIn()
 {
-    if(loggedUserID > 0)
-        return true;
-    else
-        return false;
+    return(loggedUserID > 0 ? true : false);
 }

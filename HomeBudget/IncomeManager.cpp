@@ -93,8 +93,10 @@ Income IncomeManager::giveNewIncomeDataOfChosenDay(){
 
 Income IncomeManager::giveNewIncomeData(){
     char answer;
-    cout << "Is the income of today? [y/n]" << endl;
-    answer = AuxiliaryMethods::getChar();
+    do {
+        cout << "Is the income of today? [y/n]" << endl;
+        answer = AuxiliaryMethods::getChar();
+    } while (answer != 'y' && answer != 'n');
 
     Income income;
 
@@ -120,10 +122,7 @@ Income IncomeManager::giveNewIncomeData(){
 
 int IncomeManager::getNewIncomeID()
 {
-    if (incomes.empty() == true)
-        return 1;
-    else
-        return incomes.back().getID() + 1;
+    return(allIncomes.empty() == true ? 1 : (allIncomes.back().getID() + 1));
 }
 
 vector <Income> IncomeManager::chooseIncomesFromMonth(int year, int month){

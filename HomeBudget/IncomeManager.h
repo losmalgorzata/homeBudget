@@ -17,6 +17,7 @@ class IncomeManager
 {
     const int LOGGED_USER_ID;
     vector <Income> incomes;
+    vector <Income> allIncomes;
     FileWithIncomes fileWithIncomes;
 
     Income giveNewIncomeData();
@@ -25,6 +26,7 @@ public:
     IncomeManager(string filenameWithIncomes, int loggedUserID)
         : fileWithIncomes(filenameWithIncomes), LOGGED_USER_ID(loggedUserID){
         incomes = fileWithIncomes.loadIncomesFromFile(LOGGED_USER_ID);
+        allIncomes = fileWithIncomes.loadAllIncomesFromFile();
     };
 
     void addIncome();

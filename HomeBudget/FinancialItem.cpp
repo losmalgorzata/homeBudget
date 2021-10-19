@@ -18,7 +18,7 @@ void FinancialItem::setItem(string newItem) {
 }
 
 void FinancialItem::setAmount(double newAmount) {
-    amount = newAmount;
+    amount = ceil(newAmount * 100.0) / 100.0;
 }
 
 void FinancialItem::setDateInt(int newDateInt){

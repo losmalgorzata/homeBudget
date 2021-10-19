@@ -14,4 +14,11 @@
 <Name>Piotr</Name>
 <Surname>Brzozowski</Surname>
 </User>
+<User>
+<UserID>3</UserID>
+<Login>Brzoza</Login>
+<Password>brzoza</Password>
+<Name>Piotr</Name>
+<Surname>Brzozowski</Surname>
+</User>
 </Users>

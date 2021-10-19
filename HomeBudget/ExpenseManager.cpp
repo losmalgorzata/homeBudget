@@ -93,8 +93,10 @@ Expense ExpenseManager::giveNewExpenseDataOfChosenDay(){
 
 Expense ExpenseManager::giveNewExpenseData(){
     char answer;
-    cout << "Is the expense of today? [y/n]" << endl;
-    answer = AuxiliaryMethods::getChar();
+    do {
+        cout << "Is the expense of today? [y/n]" << endl;
+        answer = AuxiliaryMethods::getChar();
+    } while (answer != 'y' && answer != 'n');
 
     Expense expense;
 
@@ -120,10 +122,7 @@ Expense ExpenseManager::giveNewExpenseData(){
 
 int ExpenseManager::getNewExpenseID()
 {
-    if (expenses.empty() == true)
-        return 1;
-    else
-        return expenses.back().getID() + 1;
+    return(allExpenses.empty() == true ? 1 : (allExpenses.back().getID() + 1));
 }
 
 vector <Expense> ExpenseManager::chooseExpensesFromMonth(int year, int month){

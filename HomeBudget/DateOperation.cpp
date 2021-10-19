@@ -163,11 +163,7 @@ bool DateOperation::checkMinCriterion(string date){
         dayCriterion = false;
 
     int exam = yearCriterion + monthCriterion + dayCriterion;
-    if (exam == 3) {
-        return true;
-    } else {
-        return false;
-    }
+    return(exam == 3 ? true : false);
 }
 
 bool DateOperation::checkMaxCriterion(string date){
@@ -230,10 +226,7 @@ bool DateOperation::checkDate(string date){
     bool maxCriterion = checkMaxCriterion(date);
 
     int exam = minCriterion + maxCriterion;
-    if (exam == 2)
-        return true;
-    else
-        return false;
+    return(exam == 2 ? true : false);
 }
 
 int DateOperation::changeDateFromStringToInt(string date){

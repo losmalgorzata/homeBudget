@@ -9,6 +9,7 @@
 #include "Expense.h"
 #include "AuxiliaryMethods.h"
 #include "XMLFile.h"
+#include <cmath>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
     };
     bool addExpenseToFile(Expense expense);
     vector <Expense> loadExpensesFromFile(int loggedUserID);
+    vector <Expense> loadAllExpensesFromFile();
 };
 
 #endif

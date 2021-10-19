@@ -37,13 +37,59 @@ vector <Income> FileWithIncomes::loadIncomesFromFile(int loggedUserID){
             income.setUserID(userID);
             income.setDate(date);
             income.setItem(item);
-            income.setAmount(amount);
+            double newAmount = ceil(amount * 100.0) / 100.0;
+            income.setAmount(newAmount);
             income.setDateInt(dateInt);
             incomes.push_back(income);
         }
     }
 
     return incomes;
+}
+
+vector <Income> FileWithIncomes::loadAllIncomesFromFile(){
+    CMarkup xml;
+    Income income;
+    vector <Income> allIncomes;
+    bool fileExists = xml.Load( getFilename().c_str() );
+
+    if (!fileExists){
+        xml.SetDoc("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n");
+        xml.AddElem("Incomes");
+    }
+
+    xml.ResetPos();
+    xml.FindElem();
+    xml.IntoElem();
+
+    while ( xml.FindElem("Income") ){
+        Income income;
+        xml.IntoElem();
+        xml.FindElem( "ID" );
+        int ID = atoi(xml.GetData().c_str());
+        xml.FindElem( "UserID" );
+        int userID = atoi(xml.GetData().c_str());
+        xml.FindElem( "Date" );
+        string date = xml.GetData();
+        xml.FindElem( "Item" );
+        string item = xml.GetData();
+        xml.FindElem( "Amount" );
+        double amount = atof(xml.GetData().c_str());
+        xml.FindElem( "DateInt" );
+        int dateInt = atoi(xml.GetData().c_str());
+        xml.OutOfElem();
+
+        income.setID(ID);
+        income.setUserID(userID);
+        income.setDate(date);
+        income.setItem(item);
+        double newAmount = ceil(amount * 100.0) / 100.0;
+        income.setAmount(newAmount);
+        income.setDateInt(dateInt);
+        allIncomes.push_back(income);
+        }
+
+    return allIncomes;
 }
 
 bool FileWithIncomes::addIncomeToFile(Income income){

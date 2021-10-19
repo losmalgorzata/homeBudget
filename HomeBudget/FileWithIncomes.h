@@ -9,6 +9,7 @@
 #include "Income.h"
 #include "AuxiliaryMethods.h"
 #include "XMLFile.h"
+#include <cmath>
 
 using namespace std;
 
@@ -23,6 +24,7 @@ public:
     };
     bool addIncomeToFile(Income income);
     vector <Income> loadIncomesFromFile(int loggedUserID);
+    vector <Income> loadAllIncomesFromFile();
 };
 
 #endif

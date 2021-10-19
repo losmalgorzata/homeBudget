@@ -38,11 +38,7 @@ string AuxiliaryMethods::changeCommaToDot(string input){
     string output;
     string toReplace = ",";
     size_t pos = input.find(toReplace);
-    if (input.find(toReplace) != string::npos)
-        output = input.replace(pos, toReplace.length(), ".");
-    else
-        output =input;
-    return output;
+    return((input.find(toReplace) != string::npos) ? (output = input.replace(pos, toReplace.length(), ".")) : input);
 }
 
 int AuxiliaryMethods::stringToIntConversion(string input){
